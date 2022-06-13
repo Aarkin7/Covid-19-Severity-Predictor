@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Covid Severity Predictor</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Covid Severity Predictor</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the severity of the patient
+        <br>
+        </h5>
+      </div>
+
+        <div class="row">
+            <form action='/predict' method="post" class="col s12">
+              <div class="row">
+
+                <div class="input-field col s4">
+                    <label for="age"><b>Age</b></label>
+                    <br>
+                  <input placeholder="Enter Age" name="Age" id="age" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="hematocrit"><b>Hematocrit (in %)</b></label>
+                    <br>
+                  <input placeholder="Enter Hematocrit" name="Hematocrit" id="hematocrit" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="platelets"><b>Platelets (per microlitre)</b></label>
+                    <br>
+                  <input placeholder="Enter Platelets" name="Platelets" id="platelets" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="proteina_c"><b>Proteina_c (mg per dL)</b></label>
+                    <br>
+                  <input placeholder="Enter Proteina_c" name="Proteina_c" id="proteina_c" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="rbc"><b>Rbc (million cells per microlitre)</b></label>
+                    <br>
+                  <input placeholder="Enter Rbc" name="Rbc" id="rbc" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="eosinophils"><b>Eosinophils</b></label>
+                    <br>
+                  <input placeholder="Enter Eosinophils" name="Eosinophils" id="eosinophils" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="leukocytes"><b>Leukocytes (cells per microlitre)</b></label>
+                    <br>
+                  <input placeholder="Enter Leukocytes" name="Leukocytes" id="leukocytes" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="monocytes"><b>Monocytes (per microlitre)</b></label>
+                    <br>
+                  <input placeholder="Enter Monocytes" name="Monocytes" id="monocytes" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="influenze_test"><b>Influenze Test (Type 1 if positive, Else 0)</b></label>
+                    <br>
+                  <input placeholder="Enter Test" name="Influenza Tets" id="influenze_test" type="text" class="validate">
+                </div>
+
+              </div>
+              <div class="row center">
+                  <button type="submit" class="btn-large waves-effect waves-light orange">Predict</button>
+              </div>
+
+            </form>
+       </div>
+
+      <br>{{pred}}<br>
+
+     </div>
+    </div>
+   </div>
+  </div>>
+
+  </body>
+</html>
